@@ -1,0 +1,90 @@
+@font-face{/* Customize font family */
+    font-family: charter;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face{/* Customize font family */
+    font-family: charter;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face{/* Customize font family */
+    font-family: charter;
+    src: url('../fonts/charter-bold.otf');
+    font-style: bold;
+    font-weight: 400;
+}
+
+@font-face{/* Customize font family */
+    font-family: charter;
+    src: url('../fonts/charter-bold-italic.otf.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+
+:root{
+    --grayBlack : #212121;
+    --gray : #616161;
+    --grayMamba : #212429;
+}
+
+*{
+
+}
+
+body{
+    color: var(--grayBlack);
+    /* font-family: charter; */
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    color: var(--grayBlack);
+}
+
+/* Font size */
+html{
+    font-size: 62.5%;
+}
+
+/* Header properties........ */
+header{
+    font-size: 1.4rem;
+    color: var(--gray);
+}
+
+nav details summary{
+    color: var(--grayBlack);
+    font-weight: bold;
+}
+
+header a{
+    color: var(--gray);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--grayBlack);
+}
+
+h1{
+    font-size: 6rem;
+}
+
+h2{
+    font-size: 3.2rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+p{
+    font-size: 1.6rem;
+}
