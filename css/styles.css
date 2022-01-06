@@ -88,3 +88,16 @@ h3{
 p{
     font-size: 1.6rem;
 }
+
+pre{
+    background: #FEC62E;
+}
+
+.hero{
+    width: 100vw;
+    height: 350px;
+    background-image: linear-gradient(to top,rgb(255,255,255, .3) , transparent 120px), url('../src/patron.png');
+    /* usamos linear-gradient para colocar fondos de color a imgs, to top significa que vamos de abajo hacia arriba, puedes combinar 2 a mas colores y tansparentes */
+    /* background-position: center;  // ajusta el contenido a su posicion, lo situa enfrente*/
+    /* background-size: cover; // Ajusta una imagen a su contenedor */
+}
