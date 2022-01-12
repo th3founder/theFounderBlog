@@ -1,0 +1,231 @@
+@font-face{/* Customize font family */
+    font-family: charter;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face{/* Customize font family */
+    font-family: charter;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face{/* Customize font family */
+    font-family: charter;
+    src: url('../fonts/charter-bold.otf');
+    font-style: bold;
+    font-weight: 400;
+}
+
+@font-face{/* Customize font family */
+    font-family: charter;
+    src: url('../fonts/charter-bold-italic.otf.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+
+:root{
+    --grayBlack : #212121;
+    --gray : #616161;
+    --grayMamba : #212429;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: var(--grayBlack);
+    /* font-family: charter; */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+a{
+    color: var(--grayBlack);
+}
+
+/* Font size */
+html{
+    font-size: 62.5%;
+}
+
+/* Header properties........ */
+header{
+    font-size: 1.4rem;
+    color: var(--gray);
+    position: absolute;
+    top: 85px;
+    left: -232px;
+    width: 188px;
+    z-index: 1;
+    
+    
+}
+
+nav details summary{
+    color: var(--grayBlack);
+    font-weight: bold;
+    line-height: 24px;
+}
+
+header nav li{
+    margin-bottom: 16px;
+}
+
+header a{
+    color: var(--gray);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--grayBlack);
+}
+
+h1{
+    font-size: 6rem;
+    margin-top: 64px;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+h1 + p{
+    margin-bottom: 64px;
+}
+
+h2{
+    font-size: 3.2rem;
+    margin: 64px 0 40px;
+    font-weight: normal;
+}
+
+h3{
+    font-size: 2.4rem;
+    margin:16px 0 24px;
+    font-weight: normal;
+    position: relative;
+    top: 0;
+    background-color: white;
+}
+
+p{
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+
+pre{
+    background: #FEC62E;
+    padding: 3rem 0 3rem 0;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+hr{
+    border-color: #616161;
+    margin: 64px 0;
+}
+
+
+blockquote{
+    margin: 32px 0 64px;
+    font-size: 24px;
+    padding-left: 16px;
+    border-left: 4px solid black;
+    line-height: 24px;
+}
+/* 
+    img background section, header
+*/
+
+.header{
+    position: sticky;
+    top: 0;
+}
+
+.header-content{
+    position: relative;
+
+
+}
+
+
+main{
+
+}
+
+.wrapper{
+    width: 902px;
+    margin: auto;
+}
+
+.main-content{
+    background-color: white;
+}
+
+.hero{
+    top: 0;
+    width: 100vw;
+    height: 350px;
+    background-image: linear-gradient(to top,rgb(255,255,255, .3) , transparent 120px), url('../src/patron.png');
+    /* usamos linear-gradient para colocar fondos de color a imgs, to top significa que vamos de abajo hacia arriba, puedes combinar 2 a mas colores y tansparentes */
+    /* background-position: center;  // ajusta el contenido a su posicion, lo situa enfrente*/
+    /* background-size: cover; // Ajusta una imagen a su contenedor */
+}
+
+.section-content{
+    counter-reset: titleList;
+    
+}
+
+.section-content:last-of-type{
+    margin-top: 164px;
+}
+
+.section-content h3{
+    counter-increment: titleList;
+    padding-bottom: 8px;
+}
+
+.section-content h3::before{
+    content: counter(titleList, decimal) "."; /* Agrega contenido antes */
+
+}
+
+.section-content h3::after{
+    content: ''; /* Agrega contenido despues */
+    width: 80px;
+    height: 4px;
+    display: block;
+    background-color: #424242;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.section-content img{
+    margin-top: 40px;
+}
+
+.section-content ol, ul{
+    font-size: 16px;
+}
+
+.section-content ol li{
+    line-height: 24px;
+}
+
+.section-content ul li{
+    margin-bottom: 16px;
+}
+
+::selection{
+    background-color: antiquewhite; /* Cambia el color cuando seleccionamos el texto en el sitio web */
+}
+.section2 img{
+    inline-size: 100%;
+}

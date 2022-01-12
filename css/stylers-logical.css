@@ -1,0 +1,198 @@
+@font-face{/* Customize font family */
+    font-family: charter;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face{/* Customize font family */
+    font-family: charter;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face{/* Customize font family */
+    font-family: charter;
+    src: url('../fonts/charter-bold.otf');
+    font-style: bold;
+    font-weight: 400;
+}
+
+@font-face{/* Customize font family */
+    font-family: charter;
+    src: url('../fonts/charter-bold-italic.otf.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+
+
+
+:root{
+    --whiteBlack : #A5A3A5;
+    --white : white;
+    --whiteMamba : #3A3539;
+}
+
+*{
+
+}
+
+body{
+    color: var(--white);
+    /* font-family: charter; */
+    font-family: 'Nunito', sans-serif;
+    background-color: #251F24;
+    margin: 0;
+}
+
+a{
+    color: var(--grayBlack);
+}
+
+/* Font size */
+html{
+    font-size: 62.5%;
+}
+
+/* Header properties........ */
+header{
+    font-size: 1.4rem;
+    color: var(--gray);
+}
+
+nav details summary{
+    color: var(--grayBlack);
+    font-weight: bold;
+}
+
+header li{
+    color: var(--whiteBlack);
+}
+
+header a{
+    color: var(--whiteBlack);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: var(--grayBlack);
+}
+
+h1{
+    font-size: 6rem;
+    font-weight: normal;
+    margin-block: 64px 16px;
+}
+
+h2{
+    font-size: 4rem;
+    font-weight: normal;
+    margin-block: 40px;
+
+}
+
+h3{
+    font-weight: 600;
+    font-size: 3.2rem;
+    margin-block: 16px;
+}
+
+hr{
+    margin-block: 40px;
+    border-color: rgb(97, 97, 97, 0.2);
+}
+
+p{
+    font-size: 1.6rem;
+    color: var(--whiteBlack);
+}
+
+pre{
+    background: var(--whiteMamba);
+    padding: 2rem 0;
+    font-size: 12px;
+    overflow: auto;
+    border-radius: 8px;
+}
+
+/* 
+    img background section, header
+*/
+.hero{
+    width: 100vw;
+    height: 350px;
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+/*     background-image: linear-gradient(to top,rgb(255,255,255, .3) , transparent 120px), url('../src/patron.png');
+ */    /* usamos linear-gradient para colocar fondos de color a imgs, to top significa que vamos de abajo hacia arriba, puedes combinar 2 a mas colores y tansparentes */
+    /* background-position: center;  // ajusta el contenido a su posicion, lo situa enfrente*/
+    /* background-size: cover; // Ajusta una imagen a su contenedor */
+}
+
+.section-content{
+    counter-reset: titleList;
+}
+
+.section-content img{
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
+}
+
+.section-content h3{
+    counter-increment: titleList;
+}
+
+.section-content h3::before{
+    content: counter(titleList, decimal) "."; /* Agrega contenido antes */
+
+}
+
+.section-content h3::after{
+    content: ''; /* Agrega contenido despues */
+    width: 50px;
+    height: 4px;
+    display: block;
+    background-color: white;
+    display: block;
+}
+
+::selection{
+    background-color: antiquewhite; /* Cambia el color cuando seleccionamos el texto en el sitio web */
+}
+
+
+blockquote{
+    margin-block: 80px 63px;
+    background-color: var(--whiteMamba);
+    border-radius: 8px;
+    padding-inline-end: 24px;
+    padding-inline-start: 24px;
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+    line-height: 32px;
+    font-size: 24px;
+}
+
+blockquote p{
+    color: var(--white);
+}
+
+.main hr{
+    display: none;
+}
+
+.main{
+    border: 2px solid blue;
+}
+
+.wrapper{
+    border: 2px solid white;
+}
+
+.main-content{
+    border: 2px solid red;
+    max-inline-size: 902px;
+    margin: auto;
+    padding-inline: 16px;
+}
