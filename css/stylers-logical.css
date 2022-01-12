@@ -38,6 +38,10 @@
 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     color: var(--white);
     /* font-family: charter; */
@@ -56,9 +60,24 @@ html{
 }
 
 /* Header properties........ */
+
+.header{
+    position: sticky;
+    inset-block-start: -35px; /* Restamos -35 a los 65px queestan en la clase -header-content para que al momento de hacer scroll no exista tanta separación */
+}
+.header-content{
+    position: relative;
+    inset-block-start: 65px;
+    
+}
 header{
     font-size: 1.4rem;
     color: var(--gray);
+    position: absolute;
+    /* inset-block-start: 10px; */ /* Es como el top 0 */
+    inset-inline-start: 208px;
+    inline-size: 188px;
+    
 }
 
 nav details summary{
@@ -68,6 +87,7 @@ nav details summary{
 
 header li{
     color: var(--whiteBlack);
+    margin-block-end: 16px;
 }
 
 header a{
@@ -114,6 +134,11 @@ pre{
     font-size: 12px;
     overflow: auto;
     border-radius: 8px;
+    border-inline: 5px solid #5551FF;
+    border-block: 5px solid #5551FF;
+    box-shadow: -10px 10px  0 0 #ABAAF6;
+    margin-block-end: 30px;
+    border-start-start-radius: 50px;
 }
 
 /* 
@@ -183,16 +208,53 @@ blockquote p{
 }
 
 .main{
-    border: 2px solid blue;
+   
 }
 
 .wrapper{
-    border: 2px solid white;
+    
 }
 
 .main-content{
-    border: 2px solid red;
     max-inline-size: 902px;
     margin: auto;
     padding-inline: 16px;
+}
+
+.slider{
+
+}
+
+.slider-container{
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.video{
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* Que es la proporcion que vienen lo videos */
+}
+
+.slider-bullet-list{
+    text-align: center;
+}
+
+.slider-bullet{
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background-color: white;
+    border-radius: 50%;
+    margin-block: 1rem;
+    margin-inline: 1.5px;
+    font-size: 0;
+}
+
+.slider-bullet:hover{
+    background-color: #5551FF;
 }
