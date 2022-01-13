@@ -39,7 +39,7 @@
 }
 
 html{
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 body{
@@ -60,26 +60,14 @@ html{
 }
 
 /* Header properties........ */
-
-.header{
-    position: sticky;
-    inset-block-start: -35px; /* Restamos -35 a los 65px queestan en la clase -header-content para que al momento de hacer scroll no exista tanta separación */
-}
 .header-content{
-    position: relative;
-    inset-block-start: 65px;
-    
+    display: block;
+    margin-inline-start: calc(100%-10px);
+    margin-block-start: 60px;
 }
 header{
-    font-size: 1.4rem;
-    color: var(--gray);
-    position: absolute;
-    /* inset-block-start: 10px; */ /* Es como el top 0 */
-    inset-inline-start: 208px;
-    inline-size: 188px;
-    
+    font-size: 16px;
 }
-
 nav details summary{
     color: var(--grayBlack);
     font-weight: bold;
@@ -100,7 +88,7 @@ header a:hover{
 }
 
 h1{
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: normal;
     margin-block: 64px 16px;
 }
@@ -145,8 +133,7 @@ pre{
     img background section, header
 */
 .hero{
-    width: 100vw;
-    height: 350px;
+    block-size: 350px;
     background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
 /*     background-image: linear-gradient(to top,rgb(255,255,255, .3) , transparent 120px), url('../src/patron.png');
  */    /* usamos linear-gradient para colocar fondos de color a imgs, to top significa que vamos de abajo hacia arriba, puedes combinar 2 a mas colores y tansparentes */
@@ -156,6 +143,7 @@ pre{
 
 .section-content{
     counter-reset: titleList;
+    
 }
 
 .section-content img{
@@ -208,7 +196,7 @@ blockquote p{
 }
 
 .main{
-   
+   margin-left: 3rem;
 }
 
 .wrapper{
@@ -257,4 +245,71 @@ blockquote p{
 
 .slider-bullet:hover{
     background-color: #5551FF;
+}
+
+
+/* Formulario */
+
+.form{
+
+}
+
+.form input{
+    width: 100%;
+    border: 1px solid white;
+    box-sizing: border-box;
+    background-color: var(--whiteMamba);
+    border-radius: 8px;
+    font-size: 16px;
+    padding-block: 12px;
+    padding-inline: 16px;
+    color: var(--white);
+    display: block;
+    margin-block-end: 24px;
+}
+
+.form input:last-of-type{
+    background-color: #157EFB;
+    border: none;
+}
+
+.form input::-webkit-input-placeholder{
+    color: var(--whiteBlack);
+}
+
+.form input:last-of-type:hover{
+    background-color: ;
+}
+
+
+/* Responsive design */
+
+@media screen and (min-width: 1366px) {
+    h1{
+        font-size: 6rem;
+    }
+
+    .header{
+        position: sticky;
+        inset-block-start: -35px; /*Restamos -35 a los 65px queestanen la clase -header-content paraque al momento de hacer scrollno exista tanta separación */
+    }
+    .header-content{
+        position: absolute;
+        inset-block-start: 20px;
+        inset-inline-start: calc(100%-50%);
+        margin-inline-start: 30px;
+        margin-block-start: 0px;
+    
+        
+    }
+    header{
+        font-size: 1.4rem;
+        color: var(--gray);
+        position: absolute;
+        /* inset-block-start: 10px; */
+        inset-inline-start: cal(200px);
+        inline-size: 188px;
+        
+    }
+        
 }
